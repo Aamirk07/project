@@ -1,0 +1,20 @@
+/* variables.css */
+
+:root {
+  --primary-color: #fff;
+  --secondary-color: #EB5E55;
+  --font-family: Arial, sans-serif;
+  --text-color:white;
+  --text-dark:black;
+  --text-light:gray;
+  --font-size: 16px;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  background-color: var(--primary-color);
+  overflow-x: hidden;
+}
