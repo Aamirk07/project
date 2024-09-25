@@ -6,6 +6,7 @@ import { FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { MdOutlineLogout } from "react-icons/md";
 import { FaSearch } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -18,10 +19,18 @@ const Navbar = () => {
       </div>
       <div className="navMid">
         <ul className="links">
-          <li className="link">Home</li>
-          <li className="link">About</li>
-          <li className="link">Write</li>
-          <li className="link">Contact</li>
+          <Link className="link" to="/">
+            <li className="link">Home</li>
+          </Link>
+          <Link className="link" to="/about">
+            <li className="link">About</li>
+          </Link>
+          <Link className="link" to="/write">
+            <li className="link">Write</li>
+          </Link>
+          <Link className="link">
+            <li className="link">Contact</li>
+          </Link>
         </ul>
       </div>
       <div className="navRight">
@@ -29,7 +38,9 @@ const Navbar = () => {
           <FaSearch className="search-icon" />
           <input type="search" />
         </div>
-        <MdOutlineLogout className="logout-icon" />
+        <Link className="link" to="/login">
+          <MdOutlineLogout className="logout-icon" />
+        </Link>
       </div>
     </div>
   );
