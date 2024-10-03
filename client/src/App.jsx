@@ -1,18 +1,21 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
-import Footer from "./components/footer/Footer";
 import Home from "./pages/home/Home";
-import "./global.css"
+import "./global.css";
+import Header from "./components/headrer/Header";
+import Footer from "./components/footer/Footer"
+import List from "./pages/list/List";
 
 const Layout = () => {
   return (
     <>
       <Navbar />
+      <Header />
       <div className="main-content">
         <Outlet />
       </div>
-      <Footer />
+      <Footer/>
     </>
   );
 };
@@ -24,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/list",
+        element: <List />,
       },
     ],
   },
